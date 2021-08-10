@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS and JS-->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script type="text/javascript" src="./js/script.js" defer></script> <!--defer é um atributo pra funcionar alguma coisa-->
+    <script type="text/javascript" src="./js/verbos.js"></script>
+    <!--Title and favcon-->
+    <title>LearnVerbs - +100 verbos em inglês</title>
+    <link rel="shortcut icon" href="./img/favcon.png">
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tutorial</a></li>
+            <li><a href="#">About us</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="app-area">
+            <!-------------------------------------------------------- TELA 1 ----------------------------------------------------------->
+            <div class="screen1">
+                <img class="logo" src="./img/logobranca.png">
+                    <div class="email-input">
+                        <img src="./img/iconemail.png">
+                        <input type="email" name="email" placeholder="Digite seu email">
+                    </div>
+                    <img class="etapa1" src="./img/step1.png">
+                <div class="button1" onclick="nextScreen()">NEXT</div>
+                
+            </div>
+            <!-------------------------------------------------------- TELA 2 ----------------------------------------------------------->
+            <div class="screen2">
+                <img class="logo2" src="./img/logobranca.png">
+                    <div class="email-input">
+                        <img src="./img/calendario.png">
+                        <input type="date" name="age" >
+                    </div>
+                <img class="etapa2" src="./img/step2.png">   
+                    <div class="buttons">
+                        <div class="button1" onclick="backScreen3()">BACK</div>
+                        <div class="button1" onclick="nextScreen2()">NEXT</div>            
+                    </div>
+            </div>
+            <!-------------------------------------------------------- TELA 3 ----------------------------------------------------------->
+            <div class="logo-area">
+                <img class="logo3" src="./img/logobranca.png">
+            </div>
+            
+            <div class="screen3">
+                    <!--AREA FIXA-->
+                    <div class="buttonBack" onclick="backScreen2()">Back</div>
+                    <div class="ajuste--verbos-estudados">
+                        <p class="verbos-estudados">0/10 Learned verbs</p>
+                        <div class="ajuste--descricao">
+                            <div class="desc1">VERBO EM INGLÊS</div>
+                            <div class="desc2">CONCLUÍDOS</div>
+                        </div>
+                    </div>
+                    <!-------------------------------------------------- CONTEÚDO DO VERBO --------------------------------------------------->                       
+                <div class="models"> <!--Models para reorganizar a ordem das divs de verbo-->
+                    <div id="" class="verbo-area">
+                        <div class="border-verbo">
+                            <a href=""><div id="name-verbo">TEMPLATE</div></a>
+                            <div class="relembrar">RELEMBRAR</div>
+                        </div>
+                        <div class="check-icon"" >
+                            <img src="./img/checkicon-ok-cinza.png" alt="">
+                        </div>
+                    </div>    
+                </div>
+               
+
+            </div>
+                <!-------------------------------------------------- TELA 4 --------------------------------------------------->
+            <div class="screen4">
+                <div class="descTela4">Você está aprendendo o verbo:</div>
+                <div class="name-verbo">
+                    <p class="verb-content">To Allow(MODEL)</p> <!--Ou colocar o mesmo ID do bloco anterior-->
+                </div>
+                <div class="ouvir-ingles">
+                    <p class="ouvir-text">Ouvir pronúncia em inglês</p>
+                    <div class="iconsom"><img src="./img/som.png" alt=""></div>
+                </div>
+                <div class="traducao">Tradução</div>
+                <div class="traducao-content">
+                    <p class="traducao-text">Permitir(MODEL)</p>
+                </div>
+                <div class="buttons">
+                    <div class="button2" onclick="backScreen()">BACK</div>
+                    <div class="button2" onclick="nextScreen3()">NEXT</div>
+                </div>
+                <img class="etapascreen4" src="./img/step1cinza.png" alt="">                
+            </div>
+            <!-------------------------------------------------- TELA 5 --------------------------------------------------->
+            <div class="screen5">
+                <div class="descTela5">DIGITE CORRETAMENTE O VERBO QUE ESTÁ APRENDENDO</div>
+                <div class="digiteArea">
+                    <div class="div-digiteArea">
+                        <input class="input" type="text" name="verbo" value="">
+                        <img src="./img/som.png" alt="">
+                    </div>
+                </div>
+                <div class="ajusteButton"><div class="buttonGo" onclick="capturar()">GO</div></div>
+                <div class="verificacao">
+                    <div class="verificacao-desc">Você acertou</div> <!--ou errou-->
+                    <div class="verificacao-content-acertou">To allow</div> <!--em caso de acerto aparece o verbo q a pessoa ta estudando-->
+                    <div class="verificacao-content-errou">Você errou</div> <!-- errando, aparece está mensagem-->
+                </div>
+                <div class="buttons">
+                    <div class="button2" onclick="backScreen4()">BACK</div>
+                    <div class="button2" id="button2_activated" style="display: none;" onclick="nextScreen4()">NEXT</div>
+                </div>
+                
+            </div>
+            <!-------------------------------------------------- TELA 7 --------------------------------------------------->
+            <div class="screen7">
+                <div class="title7">Exemplos em frases reais:</div>
+                <div class="inEnglish-content">
+                    <div class="inEnglish-title">In english:</div>
+                    <div class="background-example">
+                        <div class="example-english">I want to ask you a question, if you don't mind(MODEL).</div>
+                    </div>
+                </div>
+                <div class="emPortugues-content">
+                    <div class="inPortugues-title">Em português:</div>
+                    <div class="background-example">
+                        <div class="example-portugues">Eu quero te fazer uma pergunta, se você não se importa.(MODEL)</div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <div class="button2" onclick="backScreen5()" >BACK</div>
+                    <div class="button2" onclick="nextScreen6()" >NEXT</div>
+                </div>
+            </div>
+            <!-------------------------------------------------- TELA 6 --------------------------------------------------->
+            <div class="screen6">
+                <div class="simple-past-title-box">
+                    <div class="simple-past-title">Simple Past</div>
+                    <img src="./img/duvida.png" alt="O que é Simple Past?" title="O que é Simple Past?" onclick="duvidaScreen()">
+                </div>
+                <div class="content-simple-past">
+                    <div class="simple-past-verb">Verbo passado</div>
+                    <div class="simple-past-modelo">verbo + ed</div>
+                    <div class="simple-past-audio"><img src="./img/som.png" alt="Ouvir pronúnia"></div>
+                </div>
+                <div class="simple-past-traducao-content">
+                    <div class="traducao-legenda">Tradução</div>
+                    <div class="simple-past-traducao">TradVerbo</div>
+                </div>
+                <div class="buttons">
+                    <div class="button2" onclick="backScreen7()">BACK</div>
+                    <div class="button2" onclick="nextScreen8()" >NEXT</div>
+                </div>
+            </div>
+
+            <div class="simple-past-definicao">
+                <div class="definicao-title">
+                    <img src="./img/duvida.png" alt="" title="O que é Simple Past?">
+                </div>
+                    <div class="pergunta-definicao">O que é Simple Past?</div>
+                
+                <div class="resposta-definicao">O passado simples ou passado indefinido, às vezes 
+                    chamado de pretérito, é a forma básica do pretérito 
+                    no inglês moderno. É usado principalmente para 
+                    descrever eventos no passado, embora também 
+                    tenha alguns outros usos.
+                </div>
+                <div class="buttons">
+                    <div class="button2" onclick="duvidaBackScreen()" >BACK</div>
+                </div>
+                <div class="referencia">
+                    <a href="https://en.wikipedia.org/wiki/Simple_past "> Referência: https://en.wikipedia.org/wiki/Simple_past </a>
+                </div>    
+            </div>
+            <!-------------------------------------------------- TELA 8 --------------------------------------------------->
+            <div class="screen8">
+                <div class="simple-past-title-box">
+                    <div class="simple-past-title">Simple Past</div>
+                    <img src="./img/duvida.png" alt="O que é Simple Past?" title="O que é Simple Past?" onclick="duvidaScreen()">
+                </div>
+                <div class="simplepast-content">
+                    <div class="simplepast-title">Example:</div>
+                    <div class="background-example-sp">
+                        <div class="example-simplepast">He asked my name(MODEL)</div>
+                    </div>
+                </div>
+                <div class="simplepast-content-port">
+                    <div class="simplepast-title-port">Em português:</div>
+                    <div class="background-example-sp">
+                        <div class="example-simplepast-port">Ele perguntou meu nome(MODEL)</div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <div class="button2" onclick="backScreen6()" >BACK</div>
+                    <div class="button2" onclick="nextScreen9()" >NEXT</div>
+                </div>
+            </div>
+            <!-------------------------------------------------- TELA FINAL --------------------------------------------------->
+            <div class="screen9">
+                <div class="texto-final">
+                    <h1>Parabéns!</h1>
+                    <h2>Você concluiu o verbo</h2>
+                    <div class="verbo-concluido">Nome verbo</div>
+                </div>
+
+                <div class="box-button">
+                    <button class="novamente" onclick="backScreen8()">ESTUDAR NOVAMENTE</button>
+                    <button class="voltar-menu" onclick="backScreen9()">VOLTAR AO MENU</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <button onclick="loadPosts()">Clique aqui</button>
+    <div id="posts"></div>
+    <br>
+    <br>
+    <input type="file" id="arquivo">
+    <button onclick="enviar()">Enviar</button>
+    <br>
+    <br>
+</body>
+</html>

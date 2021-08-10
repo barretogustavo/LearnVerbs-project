@@ -1,0 +1,773 @@
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RESET xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx MENU DE NAVEGAÇÃO xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: #5a98e5;
+}
+ul{
+        width: 100%;
+        height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+        list-style: none;
+        font-family: sans-serif;
+        font-size: 20px;
+}
+
+
+li{
+    display: inline-block;
+    margin-left: 10px;;
+    padding: 15px;
+}
+
+li:hover a{
+    background-color: white;
+    color:#5a98e5;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color:#5a98e5 ;
+   
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx BACKGROUND DO SITE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+section{
+    width: 100%;
+    height: 1000px;
+    background-color: #5a98e5;
+    display: flex;
+    justify-content: center;
+}
+/*AREA DO APP*/
+.app-area{
+    width: 700px;
+    height: 860px;
+    border-radius: 35px;
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx SCREEN 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+.screen1{
+    height: 80%;
+    flex-direction: column;
+    display: flex; /*Alterar para flex no JS -----------------------------------------------------------------------------------------------------*/
+    justify-content: center;
+    align-items: center;
+}
+            /*LOGO*/
+.screen1 .logo{
+    width: 400px;
+    margin-bottom: 200px;
+}
+
+            /*EMAIL AREA*/
+.email-input{       
+    background-color: white;
+    box-shadow: #c7d1dd 1px 1px 15px 0px;
+    width: 400px;
+    height: 45px;
+    border: transparent;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.email-input input{
+    width: 370px;
+    height: 40px;
+    border: transparent;
+    color:#5a98e5;
+    font-size: 14px;
+    font-family: 'rockwell';
+}
+input:focus{
+    border:0 none;
+    outline: none;
+}
+
+.email-input img{
+    width: 27px;
+    padding: 10px;
+}
+.screen1 .etapa1{
+    width: 40px;
+    margin-top: 35px;
+}
+            /*BUTTON AREA*/
+.button1{
+   width: 110px;
+   height: 50px;
+   margin-top: 100px;
+   margin-left: 10px;
+   background-color: white;
+   border-radius: 10px;
+   text-align: center;
+   color: #5a98e5;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.button1:hover{
+    cursor: pointer;
+    box-shadow: #c7d1dd 1px 1px 15px 0px;
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx SCREEN 2 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+.screen2{
+    height: 80%;
+    flex-direction: column;
+    display: none; /*Alterar para flex no JS -----------------------------------------------------------------------------------------------------*/
+    justify-content: center;
+    align-items: center;
+}
+            /*LOGO*/
+.screen2 .logo2{
+    width: 400px;
+    margin-bottom: 200px;
+}
+.screen2 .etapa2{
+    width: 40px;
+    margin-top: 35px;
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx SCREEN 3 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+.logo-area{
+    width: 100%;
+    display: none; /*MUDAR PARA FLEX*/
+    justify-content: center;
+}
+.logo3{
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    margin: 10px 0 15px 0;
+}
+
+.models{
+    display: none;
+}
+.screen3{
+    width: 700px;
+    height: 775px;
+    border-radius: 35px;
+    background-color: white;
+    display: none; /*MUDAR PARA FLEX*/
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow-y: auto !important;
+}
+
+                /*TITULO*/
+.ajuste--descricao{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 25px;
+}
+.screen3 .verbos-estudados{
+    color:#3983df;
+    font-family: 'rockwell';
+    font-size: 22px;
+    margin-top: 25px;
+    text-align: center;
+}
+                /*DESCRIÇÃO*/
+.desc1{
+    color: #adadab;
+    font-size: 12px;
+    margin-left: 30px;
+}
+.desc2{
+    margin-left: 445px;
+    color: #adadab;
+    font-size: 12px;
+    margin-right: 40px;
+}
+                /*VERBO OBJETO*/
+.verbo-area{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+}
+.border-verbo{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #a3a5a3;
+    margin-left: 30px;
+    padding: 5px;
+    width: 73%;
+}
+.verbochecked{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #48e828;
+    margin-left: 30px;
+    padding: 5px;
+    width: 73%;
+}
+
+                        /*NOME DO VERBO*/
+#name-verbo{
+    color:#a3a5a3;
+    font-size: 30px;
+    font-family: 'rockwell';
+    padding: 10px;
+    padding-right: 195px;
+}
+#name-verbo:hover{
+    cursor: pointer;
+}
+
+                        /*OPÇÃO DE RELEMBRAR*/
+.relembrar{
+    color: #CCC;
+    font-size: 13px;
+    font-family: 'rockwell';
+    margin-top: 20px;
+}
+.relembrar:hover{
+    cursor: pointer;
+    color: red;
+}
+
+                        /*ÍCONE DE CONCLUÍDO*/
+.check-icon{
+    width: 100px;
+    height: 70px;
+    margin-left: 15px;
+}
+
+.check-icon img{
+    width: 75px;
+    margin-left: 15px;
+}
+.check-icon img:hover{
+    cursor: pointer;
+}
+
+.divteste{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+}
+
+.buttonBack{
+    margin-left: 33px;
+    color: #3983DF;
+    font-size: 20px;
+    margin-top: 15px;
+    border: 1px solid #3983DF;
+    border-radius: 5px;
+    width: 48px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx SCREEN 4 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+.screen4{
+    width: 700px;
+    height: 775px;
+    border-radius: 35px;
+    background-color: white;
+    display: none; /*MUDAR PARA FLEX*/
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.descTela4{
+    width: 100%;
+    height: 10px;
+    color: #adadab;
+    font-family: 'rockwell';
+    font-size: 13px;
+    text-align: center;
+    padding-top: 65px;
+}
+.verb-content{
+    color: #3983df;
+    font-size: 70px;
+    font-family: 'rockwell';
+    text-align: center;
+    width: 100%;
+}
+.ouvir-ingles{
+    margin-top: 50px;    
+}
+.iconsom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+}
+.iconsom:hover{
+    cursor: pointer;
+}
+.ouvir-ingles img{
+    width: 30px;
+}
+.ouvir-text{
+    color: black;
+    font-size: 13px;
+    font-family: 'rockwell';
+    text-align: center;
+    width: 100%;
+}
+.traducao{
+    width: 100%;
+    color: #adadab;
+    font-size: 13px;
+    font-family: 'rockwell';
+    text-align: center;
+    margin-top: 150px;
+}
+.traducao-content{
+    width: 100%;
+}
+.traducao-text{
+    color: #0c9646;
+    font-size: 70px;
+    font-family: 'rockwell';
+    text-align: center;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.button2{
+   width: 110px;
+   height: 50px;
+   margin-top: 100px;
+   margin-left: 10px;
+   background-color: white;
+   border-radius: 10px;
+   box-shadow: 0px 6px 16px -2px #adadab;
+   text-align: center;
+   color: #3983df;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+}
+.etapascreen4{
+    margin-top: 25px;
+    width: 30px;
+}
+.button2:hover{
+    cursor: pointer;
+    box-shadow: 0px 6px 16px -2px #77a1d5;
+}
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx SCREEN 5 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+.screen5{
+    width: 700px;
+    height: 775px;
+    border-radius: 35px;
+    background-color: white;
+    display: none; /*MUDAR PARA FLEX*/
+    justify-content: center;
+    flex-direction: column;
+}
+.digiteArea{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+}
+.div-digiteArea{
+    width: 550px;
+    height: 85px;
+    border: 2px solid #bebebe;
+    border-radius: 20px; 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.digiteArea input{
+    width: 450px;
+    height: 70px;
+    border: none;
+    text-align: center;
+    color:#3983df ;
+    font-size: 50px;
+    font-family: 'rockwell';
+    margin-left: 50px;
+}
+.div-digiteArea img{
+    width: 30px;
+    height: 27px;
+    margin-top: 4.8%;
+    cursor: pointer;
+}
+.descTela5{
+    color: #959393;
+    font-size: 12px;
+    text-align: center;
+}
+        /*Botões de Back e Next*/
+.ajusteButton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.buttonGo{
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 16px -2px #adadab;
+    text-align: center;
+    color: #3983df;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+        /*VERIFICAR SE O USUARIO ACERTOU*/
+.verificacao{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 55px;
+}
+.verificacao-desc{
+    display: none; /*MUDAR PARA BLOCK*/
+    margin-left: 14%;
+    margin-bottom: 15px;
+    color: #46e926; /*ou #FF0000*/
+    font-size: 19px;
+}
+
+.verificacao-content-acertou{
+    width: 554px;
+    height: 89px;
+    margin-left: 10%;
+    border: 1px solid #46e926;
+    border-radius: 15px;
+    box-shadow: 0px 0px 21px -3px #46e926;
+    display: none; /*MUDAR PARA FLEX*/
+    align-items: center;
+    justify-content: center;
+    color: #46e926;
+    font-size: 50px;
+    font-family: 'rockwell';
+}
+.verificacao-content-errou{
+    width: 554px;
+    height: 89px;
+    margin-left: 10%;
+    border: 1px solid #ff0000;
+    border-radius: 15px;
+    box-shadow: 0px 0px 21px -3px #ff0000;
+    display: none; /*MUDAR PARA FLEX*/
+    align-items: center;
+    justify-content: center;
+    color: #ff0000;
+    font-size: 50px;
+    font-family: 'rockwell';
+}
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx SCREEN 7 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+.screen7{
+    width: 700px;
+    height: 775px;
+    border-radius: 35px;
+    background-color: white;
+    display: none; /*MUDAR PARA FLEX*/
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.title7{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    font-size: 22px;
+    font-family: 'rockwell';
+    color: #d9d8d8;    
+}
+.inEnglish-title{
+    color: #0c9646;
+    font-family: 'rockwell';
+}
+.background-example{
+    background-color: #eee;
+    width: 80%;
+    min-height: 80px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.inEnglish-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+.example-english{
+    color: #3983df;
+    font-family: 'rockwell';
+    font-size: 21px;
+    text-align: center;
+}
+.emPortugues-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    margin-top: 180px;
+}
+.example-portugues{
+    color: #3983df;
+    font-family: 'rockwell';
+    font-size: 21px;
+    text-align: center;
+}
+.inPortugues-title{
+    color: #0c9646;
+    font-family: 'rockwell';
+}
+
+
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx SCREEN 6 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+.screen6{
+    width: 700px;
+    height: 775px;
+    border-radius: 35px;
+    background-color: white;
+    display: none; /*MUDAR PARA FLEX*/
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.simple-past-title-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.simple-past-title-box img{
+    width: 30px;
+    margin-top: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.simple-past-title{
+    text-align: center;
+    color: #bdbdbb;
+    font-family: 'rockwell';
+    font-size: 25px;
+    margin-top: 25px;
+}
+.simple-past-verb{
+    text-align: center;
+    margin-top: 85px;
+    font-size: 60px;
+    font-family: 'rockwell';
+    color: #3983df;
+}
+.simple-past-modelo{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'rockwell';
+}
+.simple-past-audio{
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+.simple-past-audio img{
+    width: 30px;
+    cursor: pointer;
+}
+.simple-past-traducao-content{
+    display: flex;
+    justify-content: center;
+}
+.traducao-legenda{
+    text-align: center;
+    position: absolute;
+    margin-top: 140px;
+    color: #bdbdbb;
+    font-size: 17px;
+    font-family: 'rockwell';
+}
+.simple-past-traducao{
+    text-align: center;
+    margin-top: 150px;
+    font-size: 55px;
+    font-family: 'rockwell';
+    color: #0c9646;
+}
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx TELA O QUE É xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+.simple-past-definicao{
+    width: 700px;
+    height: 775px;
+    border-radius: 35px;
+    background-color: white;
+    display: none; /*MUDAR PARA FLEX*/
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.definicao-title{
+    display: flex;
+    justify-content: center;
+    margin-top: 180px;
+}
+.pergunta-definicao{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 32px;
+    font-family: 'rockwell';
+    color: #bdbdbb;
+}
+.resposta-definicao{
+    text-align: center;
+    font-size: 23px;
+    font-family: 'rockwell';
+    color: #3983df;
+    margin-top: 25px;
+}
+
+.referencia{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 223px;
+}
+.referencia a{
+    color: black;
+}
+
+.definicao-title img{
+    width: 35px;
+}
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx SCREEN 8 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+.screen8{
+    width: 700px;
+    height: 775px;
+    border-radius: 35px;
+    background-color: white;
+    display: none; /*MUDAR PARA FLEX*/
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.simplepast-title{
+    color: #0c9646;
+    font-family: 'rockwell';
+}
+.background-example-sp{
+    background-color: #eee;
+    width: 80%;
+    min-height: 80px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.simplepast-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    margin-top: 90px;
+}
+.example-simplepast{
+    color: #3983df;
+    font-family: 'rockwell';
+    font-size: 21px;
+    text-align: center;
+}
+.simplepast-content-port{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    margin-top: 180px;
+}
+.example-simplepast-port{
+    color: #3983df;
+    font-family: 'rockwell';
+    font-size: 21px;
+    text-align: center;
+}
+.simplepast-title-port{
+    color: #0c9646;
+    font-family: 'rockwell';
+}
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx SCREEN 9 - ULTIMA POR ENQUANTO xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+.screen9{
+    width: 700px;
+    height: 775px;
+    border-radius: 35px;
+    background-color: white;
+    display: none; /*MUDAR PARA FLEX*/
+    justify-content: center;
+    flex-direction: column;
+}
+.texto-final{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.texto-final h1{
+    color: #3983df;
+    font-size: 45px;
+    font-family: 'rockwell';
+}
+.texto-final h2{
+    color: #3983df;
+    font-size: 45px;
+    font-family: 'rockwell';
+}
+.verbo-concluido{
+    font-size: 45px;
+    font-family: 'rockwell';
+    color: #0ef56f;
+}
+.box-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.novamente{
+    width: 152px;
+    height: 50px;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 6px 16px -2px #adadab;
+    text-align: center;
+    color: #3983df;
+}
+.voltar-menu{
+    width: 152px;
+    height: 50px;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 6px 16px -2px #adadab;
+    text-align: center;
+    color: #3983df;
+}
+
